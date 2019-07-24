@@ -1,0 +1,17 @@
+<h2>Create a Post</h2>
+<% if @post.errors %>
+    <% @post.errors.each do | error |  %>
+      <div> <li> error </li> </div>
+    <% end %>
+<% end %>
+<%= form_tag posts_path, method: "post" do %>
+  <div class="field">
+    <%= label_tag "title", "Title" %>
+    <%= text_field_tag "title" %>
+  </div>
+  <div class="field">
+    <%= label_tag "email", "Email" %>
+    <%= text_field_tag "email" %>
+  </div>
+  <%= submit_tag "Create Post" %>
+<% end %>
