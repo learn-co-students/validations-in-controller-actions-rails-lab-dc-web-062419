@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe 'songs/edit', type: :feature do
   let(:song_attributes) do
     {
